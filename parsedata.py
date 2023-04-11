@@ -86,7 +86,7 @@ class ParseData3:
                 # determine the type of case variable for how
                 # to create the label
                 if isinstance(case, str):
-                    label = str
+                    label = case
                 elif isinstance(case, numpy.int64):
                     label = f"sub_{case:05d}"
                 elif isinstance(case,float):
