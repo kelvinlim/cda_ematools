@@ -3,13 +3,14 @@
 
 import argparse
 import networkx as nx
+import matplotlib.pyplot as plt
 import os
 import glob
 import sys
 import json
 from pathlib import Path
 import pandas as pd
-import pydot
+import graphviz
 
 
 """
@@ -195,7 +196,7 @@ class GraphMetrics:
         get the ancestor edges for a keynode in the graph
         """
         newG = nx.DiGraph()
-        graph = pydot.Dot("my_graph",graph_type="graph")
+        gv = graphviz.Digraph("mygraph")
 
         ancestors = nx.ancestors(G, keynode)
         allnodes = ancestors.copy()
@@ -209,18 +210,34 @@ class GraphMetrics:
                 if node == edge[0] and   edge[1] in allnodes:
                     # add to newG
                     # get the weight
-                    weight = G[edge[0]][edge[1]]['weight']
+                    weight = float(G[edge[0]][edge[1]]['weight'])
                     newG.add_edge(edge[0],edge[1], weight=weight)
-                    # add to pydot graph
-                    graph.add_edge(pydot.Edge(src=edge[0], dest=edge[1], label=f"r={weight}"))
+                    # add to gv graph
+                    label = f'r={weight:.3f}'
+                    gv.edge(edge[0],edge[1], label=label)
                     if verbose: print(f"ancestor {edge}")
         pass
         
         if type=='dot':
-            return graph
+            return gv
         else:
             return newG 
-        
+
+    def nx_plot(self,G, outfile):
+        """
+        Generate a plot file from networkx graph
+        https://groups.google.com/g/networkx-discuss/c/hw3OVBF8orc?pli=1
+        """    
+
+        # generate pos for the plot
+        pos = nx.spring_layout(G)
+        nx.draw(G,pos)
+        # specify the edges explicitly
+        edge_labels=dict([((u,v,),d['weight'])
+            for u,v,d in G.edges(data=True)])       
+        nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels)
+        plt.savefig(outfile)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="run graph metrics on sem edge data"
