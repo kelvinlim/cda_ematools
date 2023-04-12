@@ -223,6 +223,15 @@ class GraphMetrics:
         else:
             return newG 
 
+    def render_gv(self,gv, filename, format='png'):
+        """
+        write dot commands for graphviz to the filename
+
+        """
+
+        gv.format = format
+        gv.render(filename)
+
     def nx_plot(self,G, outfile):
         """
         Generate a plot file from networkx graph
