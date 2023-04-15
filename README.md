@@ -12,13 +12,13 @@ Tools for applying causal discovery analysis to ecological momentary analysis da
 6. Create fancier output
 7. An example dataset is provided to illustrate how to use these tools.
 
-## Wrangle data
+## 1. Wrangle data
 
 This typically is done using some custom code to handle special cirumstances of the incoming data.
 
 Examples of programs for dealing with different sources will be provided here.
 
-## Parse data
+## 2. Parse data
 
 Generally we expect the data to be in a csv file with columns containing the variables and rows the measurements for each subject. Mulitple subjects can be in a file, with an id column containing the subject identifier.
 
@@ -27,3 +27,16 @@ The parsedata.py program is designed to handle many different transformations of
 Activity of the program is directed by a config.yaml file which directs the program what to do.  This allows customization of processing without having to write code.
 
 Need a description of the config.yaml file.
+
+## 3. Apply causal discovery analysis on data
+
+## 4. Apply structural equation modeling
+
+## 5. Create a summary docx file with the causal graphs
+
+## 6. Fancier output
+
+gfci plots, etc., thin_graph
+
+
+## 7. Sample dataset
