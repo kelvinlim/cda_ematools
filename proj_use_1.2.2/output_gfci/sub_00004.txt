@@ -1,0 +1,69 @@
+================================================================================
+GFCI (Mon, April 17, 2023 01:24:21 PM)
+================================================================================
+
+Runtime Parameters
+--------------------------------------------------------------------------------
+number of threads: 1
+
+Dataset
+--------------------------------------------------------------------------------
+file: sub_00004.csv
+header: yes
+delimiter: comma
+quote char: none
+missing marker: none
+comment marker: none
+
+Algorithm Run
+--------------------------------------------------------------------------------
+algorithm: GFCI
+test of independence: Fisher Z Test
+score: Sem BIC Score
+
+Algorithm Parameters
+--------------------------------------------------------------------------------
+addOriginalDataset: no
+alpha: 0.05
+completeRuleSetUsed: no
+faithfulnessAssumed: no
+maxDegree: 100
+maxPathLength: -1
+numberResampling: 0
+penaltyDiscount: 1.0
+percentResampleSize: 90
+resamplingEnsemble: 0
+resamplingWithReplacement: no
+semBicRule: 1
+semBicStructurePrior: 0.0
+verbose: no
+
+
+Mon, April 17, 2023 01:24:21 PM: Start data validation on file sub_00004.csv.
+Mon, April 17, 2023 01:24:21 PM: End data validation on file sub_00004.csv.
+There are 151 cases and 10 variables.
+
+Mon, April 17, 2023 01:24:21 PM: Start reading in file sub_00004.csv.
+Mon, April 17, 2023 01:24:21 PM: Finished reading in file sub_00004.csv.
+Mon, April 17, 2023 01:24:21 PM: File sub_00004.csv contains 151 cases, 10 variables.
+Mon, April 17, 2023 01:24:21 PM: Start reading in file prior.txt.
+Mon, April 17, 2023 01:24:21 PM: Finished reading in file prior.txt.
+
+Start search: Mon, April 17, 2023 01:24:21 PM
+End search: Mon, April 17, 2023 01:24:21 PM
+
+================================================================================
+Graph Nodes:
+binge;vomit;panasneg;panaspos;pomsah;binge_lag;vomit_lag;panasneg_lag;panaspos_lag;pomsah_lag
+
+Graph Edges:
+1. binge o-> panasneg
+2. panasneg_lag o-o panaspos_lag
+3. panasneg_lag o-o pomsah_lag
+4. pomsah o-> panasneg
+
+Graph Attributes:
+BIC: 105.171095
+
+Graph Node Attributes:
+BIC: [binge: -5.017280;vomit: -5.017280;panasneg: 63.300604;panaspos: 6.030257;pomsah: -5.017280;binge_lag: -3.606589;vomit_lag: -5.017280;panasneg_lag: 4.638286;panaspos_lag: -5.017280;pomsah_lag: 59.894937]

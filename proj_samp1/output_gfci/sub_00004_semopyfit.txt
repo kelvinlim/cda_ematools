@@ -1,0 +1,15 @@
+                    Value
+DoF             12.000000
+DoF Baseline    17.000000
+chi2            13.376077
+chi2 p-value     0.342309
+chi2 Baseline  129.515820
+CFI              0.987770
+GFI              0.896722
+AGFI             0.853690
+NFI              0.896722
+TLI              0.982674
+RMSEA            0.027649
+AIC             17.822833
+BIC             44.978352
+LogLik           0.088583

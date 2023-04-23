@@ -1,0 +1,15 @@
+                      Value
+DoF            3.000000e+00
+DoF Baseline   5.000000e+00
+chi2           2.466402e-06
+chi2 p-value   1.000000e+00
+chi2 Baseline  7.050609e+01
+CFI            1.045797e+00
+GFI            1.000000e+00
+AGFI           9.999999e-01
+NFI            1.000000e+00
+TLI            1.076329e+00
+RMSEA          0.000000e+00
+AIC            6.000000e+00
+BIC            1.505184e+01
+LogLik         1.633379e-08

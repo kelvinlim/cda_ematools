@@ -1,0 +1,19 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	node [shape=box style=""]
+	panasneg [label=panasneg]
+	panasneg_lag [label=panasneg_lag]
+	panaspos [label=panaspos]
+	panaspos_lag [label=panaspos_lag]
+	pomsah [label=pomsah]
+	pomsah_lag [label=pomsah_lag]
+	panaspos_lag -> panasneg_lag [label="-0.279\np-val: 0.00"]
+	pomsah_lag -> panasneg_lag [label="0.498\np-val: 0.00"]
+	panaspos_lag -> panaspos [label="0.259\np-val: 0.00"]
+	pomsah_lag -> pomsah [label="0.504\np-val: 0.00"]
+	panasneg_lag -> panasneg [label="0.312\np-val: 0.00"]
+	panaspos -> panasneg [label="-0.274\np-val: 0.00"]
+	pomsah -> panasneg [label="0.383\np-val: 0.00"]
+}

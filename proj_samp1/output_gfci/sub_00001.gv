@@ -1,0 +1,15 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	node [shape=box style=""]
+	panaspos [label=panaspos]
+	panasneg [label=panasneg]
+	panasneg_lag [label=panasneg_lag]
+	pomsah [label=pomsah]
+	pomsah_lag [label=pomsah_lag]
+	pomsah -> panasneg [label="0.392\np-val: 0.00"]
+	panasneg_lag -> panasneg [label="0.324\np-val: 0.00"]
+	pomsah_lag -> pomsah [label="0.504\np-val: 0.00"]
+	panasneg -> panaspos [label="-0.308\np-val: 0.00"]
+}

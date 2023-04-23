@@ -1,0 +1,74 @@
+================================================================================
+GFCI (Mon, April 17, 2023 01:24:20 PM)
+================================================================================
+
+Runtime Parameters
+--------------------------------------------------------------------------------
+number of threads: 1
+
+Dataset
+--------------------------------------------------------------------------------
+file: sub_00001.csv
+header: yes
+delimiter: comma
+quote char: none
+missing marker: none
+comment marker: none
+
+Algorithm Run
+--------------------------------------------------------------------------------
+algorithm: GFCI
+test of independence: Fisher Z Test
+score: Sem BIC Score
+
+Algorithm Parameters
+--------------------------------------------------------------------------------
+addOriginalDataset: no
+alpha: 0.05
+completeRuleSetUsed: no
+faithfulnessAssumed: no
+maxDegree: 100
+maxPathLength: -1
+numberResampling: 0
+penaltyDiscount: 1.0
+percentResampleSize: 90
+resamplingEnsemble: 0
+resamplingWithReplacement: no
+semBicRule: 1
+semBicStructurePrior: 0.0
+verbose: no
+
+
+Mon, April 17, 2023 01:24:20 PM: Start data validation on file sub_00001.csv.
+Mon, April 17, 2023 01:24:20 PM: End data validation on file sub_00001.csv.
+There are 136 cases and 10 variables.
+
+Mon, April 17, 2023 01:24:20 PM: Start reading in file sub_00001.csv.
+Mon, April 17, 2023 01:24:20 PM: Finished reading in file sub_00001.csv.
+Mon, April 17, 2023 01:24:20 PM: File sub_00001.csv contains 136 cases, 10 variables.
+Mon, April 17, 2023 01:24:20 PM: Start reading in file prior.txt.
+Mon, April 17, 2023 01:24:20 PM: Finished reading in file prior.txt.
+
+Start search: Mon, April 17, 2023 01:24:20 PM
+End search: Mon, April 17, 2023 01:24:21 PM
+
+================================================================================
+Graph Nodes:
+binge;vomit;panasneg;panaspos;pomsah;binge_lag;vomit_lag;panasneg_lag;panaspos_lag;pomsah_lag
+
+Graph Edges:
+1. panasneg_lag --> panasneg dd nl
+2. panaspos --> panasneg dd nl
+3. pomsah --> panasneg dd nl
+4. binge o-o vomit
+5. binge_lag o-o vomit_lag
+6. panaspos_lag o-> panasneg_lag
+7. panaspos_lag o-> panaspos
+8. pomsah_lag o-> panasneg_lag
+9. pomsah_lag o-> pomsah
+
+Graph Attributes:
+BIC: 169.474480
+
+Graph Node Attributes:
+BIC: [binge: 32.140610;vomit: -4.912655;panasneg: 54.159251;panaspos: -0.375524;pomsah: 29.960043;binge_lag: 32.140610;vomit_lag: -4.912655;panasneg_lag: 41.100111;panaspos_lag: -4.912655;pomsah_lag: -4.912655]

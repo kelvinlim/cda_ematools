@@ -1,0 +1,4 @@
+panaspos ~ panasneg
+panasneg ~ pomsah
+panasneg ~ panasneg_lag
+pomsah ~ pomsah_lag

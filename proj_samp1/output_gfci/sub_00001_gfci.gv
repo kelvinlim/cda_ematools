@@ -1,0 +1,14 @@
+digraph G {
+	panasneg -> panaspos [ dir=forward label=" r=-0.308
+p=0.000"]
+	pomsah -> panasneg [ dir=forward label=" r=0.392
+p=0.000"]
+	binge -> vomit [ dir=both arrowhead=odot arrowtail=odot ]
+	binge_lag -> vomit_lag [ dir=both arrowhead=odot arrowtail=odot ]
+	panasneg_lag -> panasneg [ dir=both arrowtail=odot label=" r=0.324
+p=0.000"]
+	panasneg_lag -> pomsah_lag [ dir=both arrowhead=odot arrowtail=odot ]
+	panaspos_lag -> panasneg_lag [ dir=both arrowhead=odot arrowtail=odot ]
+	pomsah_lag -> pomsah [ dir=both arrowtail=odot label=" r=0.504
+p=0.000"]
+}

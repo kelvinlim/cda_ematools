@@ -1,0 +1,5 @@
+binge ~ panasneg
+pomsah ~ panasneg
+panasneg ~ panaspos
+pomsah ~ binge_lag
+panaspos ~ panasneg_lag

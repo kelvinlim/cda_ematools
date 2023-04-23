@@ -1,0 +1,9 @@
+/knowledge
+
+addtemporal
+1 binge_lag vomit_lag panasneg_lag panaspos_lag pomsah_lag
+2 binge vomit panasneg panaspos pomsah
+
+forbiddirect
+
+requiredirect

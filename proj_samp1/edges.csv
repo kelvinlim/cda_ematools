@@ -1,0 +1,17 @@
+id,a,etype,b,extra,strength,p_value
+sub_00001,panasneg,-->,panaspos,"['dd', 'nl']",-0.3079646442680899,0.0001873558190008
+sub_00001,pomsah,-->,panasneg,"['dd', 'nl']",0.3919437688135269,4.8352000847629035e-08
+sub_00001,binge,o-o,vomit,[],,
+sub_00001,binge_lag,o-o,vomit_lag,[],,
+sub_00001,panasneg_lag,o->,panasneg,[],0.324082392095435,6.422505652414756e-06
+sub_00001,panasneg_lag,o-o,pomsah_lag,[],,
+sub_00001,panaspos_lag,o-o,panasneg_lag,[],,
+sub_00001,pomsah_lag,o->,pomsah,[],0.5036515902038181,1.0609957357132773e-11
+sub_00004,panasneg,-->,binge,"['dd', 'nl']",0.2021673710509072,0.0111838841889762
+sub_00004,panasneg,-->,pomsah,"['dd', 'nl']",0.619509622954004,0.0
+sub_00004,panaspos,-->,panasneg,"['dd', 'nl']",-0.3151110601459498,4.509394106655407e-05
+sub_00004,binge_lag,o->,pomsah,[],-0.2542034248750468,5.01669614727529e-05
+sub_00004,panasneg_lag,o-o,binge_lag,[],,
+sub_00004,panasneg_lag,o->,panaspos,[],-0.239239232808902,0.0024623603406237
+sub_00004,panasneg_lag,o-o,pomsah_lag,[],,
+sub_00004,panaspos_lag,o-o,panasneg_lag,[],,

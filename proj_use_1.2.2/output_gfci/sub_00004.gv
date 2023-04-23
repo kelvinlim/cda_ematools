@@ -1,0 +1,11 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	node [shape=box style=""]
+	panasneg [label=panasneg]
+	binge [label=binge]
+	pomsah [label=pomsah]
+	binge -> panasneg [label="0.167\np-val: 0.01"]
+	pomsah -> panasneg [label="0.575\np-val: 0.00"]
+}
