@@ -222,6 +222,44 @@ class GraphMetrics:
             return gv
         else:
             return newG 
+        
+    def get_ancestor_edges_mult(self, G, key_list, verbose=False,type='dot'):
+        """
+        get the ancestor edges for multiple keynodes in the graph
+
+        key_list is a list of the keynodes
+        """
+        newG = nx.DiGraph()
+        gv = graphviz.Digraph("mygraph")
+
+        # initialize an empty set
+        allnodes = set()
+
+        for keynode in key_list:
+            ancestors = nx.ancestors(G, keynode)
+            allnodes |= ancestors
+            allnodes.add(keynode)
+    
+        for edge in G.edges:
+            if verbose: print(edge)
+
+            for node in ancestors:
+                if verbose: print(node)
+                if node == edge[0] and   edge[1] in allnodes:
+                    # add to newG
+                    # get the weight
+                    weight = float(G[edge[0]][edge[1]]['weight'])
+                    newG.add_edge(edge[0],edge[1], weight=weight)
+                    # add to gv graph
+                    label = f'r={weight:.3f}'
+                    gv.edge(edge[0],edge[1], label=label)
+                    if verbose: print(f"ancestor {edge}")
+        pass
+        
+        if type=='dot':
+            return gv
+        else:
+            return newG 
 
     def render_gv(self,gv, filename, format='png'):
         """
